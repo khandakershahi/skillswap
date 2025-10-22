@@ -1,2 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: light --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #ff630e;
+  --color-secondary: #0e0a38;
+  --color-base-200: #f7f7f7;
+  --color-base-300: #f9f9f9;
+  --color-accent: #ff630e;
+}
+
+* {
+  font-family: "Rubik", sans-serif;
+}
+
+a.active {
+  @apply text-primary;
+}
