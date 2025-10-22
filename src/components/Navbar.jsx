@@ -4,8 +4,8 @@ import { Link, NavLink } from 'react-router';
 
 const Navbar = () => {
     const links = <>
-        <li> <NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/my-proflie'>My Profile</NavLink></li>
+        <li><NavLink className='text-md font-semibold' to='/'>Home</NavLink></li>
+        <li><NavLink className='text-md font-semibold' to='/my-proflie'>My Profile</NavLink></li>
     </>
 
 
@@ -39,7 +39,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <a className="btn bg-accent text-white">Signup</a>
                 </div>
             </div>
         </div>
