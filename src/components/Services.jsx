@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaStar, FaStarHalf, FaStarHalfAlt, FaUser } from "react-icons/fa";
 import { Link, useLoaderData } from 'react-router';
-
+import 'animate.css';
 
 
 
@@ -14,13 +14,13 @@ const Services = () => {
         <div className='flex flex-col py-15 justify-center '>
             <div className='text-center pb-8'>
                 <h5 className='text-accent text-lg' >Courses</h5>
-                <h2 className='text-5xl'>Explore Popular Courses</h2>
+                <h2 className='text-5xl'>Explore Popular Skills</h2>
             </div>
 
             <div className='grid grid-cols-3 gap-8'>
                 {
                     newData.map((skill) => {
-                        return <div key={skill.skillId} className="card bg-base-100 shadow-xl rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+                        return <div key={skill.skillId} className="card bg-base-100 shadow-xl rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 animate__animated animate__fadeInUp animate__delay-1s">
                             {/* Image */}
                             <figure className="h-48">
                                 <img
@@ -57,7 +57,7 @@ const Services = () => {
 
                                 {/* Footer Info */}
                                 <div className="flex items-center justify-between text-sm text-gray-500">
-                                    <Link className='btn btn-accent text-white'>View Detials</Link>
+                                    <Link to={`/skills-details/${skill.skillId}`} className='btn btn-accent text-white'>View Detials</Link>
                                 </div>
                             </div>
                         </div>

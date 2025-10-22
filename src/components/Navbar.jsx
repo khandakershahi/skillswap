@@ -5,6 +5,7 @@ import { Link, NavLink } from 'react-router';
 const Navbar = () => {
     const links = <>
         <li><NavLink className='text-md font-semibold' to='/'>Home</NavLink></li>
+        <li><NavLink className='text-md font-semibold' to='/skills'>Skills</NavLink></li>
         <li><NavLink className='text-md font-semibold' to='/my-proflie'>My Profile</NavLink></li>
     </>
 

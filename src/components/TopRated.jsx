@@ -10,7 +10,7 @@ const TopRated = () => {
         <div className='flex flex-col py-15 justify-center '>
             <div className='text-center pb-8'>
                 <h5 className='text-accent text-lg' >Instructors</h5>
-                <h2 className='text-5xl'>Our expert instructors</h2>
+                <h2 className='text-5xl'>Top Rated Providers</h2>
             </div>
             <div className='grid grid-cols-4 gap-5'>
                 <div className='card flex flex-col justify-center items-center p-4 gap-4 bg-white rounded-md'>
