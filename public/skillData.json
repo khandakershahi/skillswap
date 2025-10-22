@@ -1,0 +1,98 @@
+[
+  {
+    "skillId": 1,
+    "skillName": "Beginner Guitar Lessons",
+    "providerName": "Alex Martin",
+    "providerEmail": "alex@skillswap.com",
+    "price": 20,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Acoustic guitar classes for complete beginners focusing on chords, rhythm, and popular songs.",
+    "image": "https://i.ibb.co.com/Kz99dg4C/guitar.jpg",
+    "category": "Music"
+  },
+  {
+    "skillId": 2,
+    "skillName": "Spoken English Practice",
+    "providerName": "Sara Hossain",
+    "providerEmail": "sara@skillswap.com",
+    "price": 10,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "Conversational English sessions for non-native speakers to build confidence and fluency.",
+    "image": "https://i.ibb.co.com/Mxnxmyct/english.jpg",
+    "category": "Language"
+  },
+  {
+    "skillId": 3,
+    "skillName": "Basic Yoga and Meditation",
+    "providerName": "Priya Sharma",
+    "providerEmail": "priya@skillswap.com",
+    "price": 15,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Relaxing yoga routines and mindfulness meditation for beginners to improve flexibility and focus.",
+    "image": "https://i.postimg.cc/02L0yLLN/yoga-class.jpg",
+    "category": "Health & Fitness"
+  },
+  {
+    "skillId": 4,
+    "skillName": "Intro to Web Development",
+    "providerName": "Michael Tan",
+    "providerEmail": "michael@skillswap.com",
+    "price": 25,
+    "rating": 4.7,
+    "slotsAvailable": 2,
+    "description": "Learn the basics of HTML, CSS, and JavaScript through practical exercises and projects.",
+    "image": "https://i.ibb.co.com/n8nYkbRb/web-dev.jpg",
+    "category": "Technology"
+  },
+  {
+    "skillId": 5,
+    "skillName": "Cooking Traditional Italian Pasta",
+    "providerName": "Giulia Rossi",
+    "providerEmail": "giulia@skillswap.com",
+    "price": 18,
+    "rating": 4.5,
+    "slotsAvailable": 3,
+    "description": "Hands-on pasta-making classes including sauces and authentic Italian techniques.",
+    "image": "https://i.postimg.cc/9fPBZ6jr/italian-cooking.jpg",
+    "category": "Cooking"
+  },
+  {
+    "skillId": 6,
+    "skillName": "Digital Photography Basics",
+    "providerName": "Ethan Walker",
+    "providerEmail": "ethan@skillswap.com",
+    "price": 22,
+    "rating": 4.8,
+    "slotsAvailable": 4,
+    "description": "Learn camera settings, lighting, and composition for stunning outdoor and portrait shots.",
+    "image": "https://i.postimg.cc/y8tJ9pTd/photography-basics.jpg",
+    "category": "Photography"
+  },
+  {
+    "skillId": 7,
+    "skillName": "Creative Writing Workshop",
+    "providerName": "Lina Rahman",
+    "providerEmail": "lina@skillswap.com",
+    "price": 12,
+    "rating": 4.4,
+    "slotsAvailable": 6,
+    "description": "Improve storytelling, grammar, and writing style through interactive creative sessions.",
+    "image": "https://i.ibb.co.com/21qXwBNn/writing.jpg",
+    "category": "Writing"
+  },
+  {
+    "skillId": 8,
+    "skillName": "Beginner Spanish Lessons",
+    "providerName": "Carlos Rivera",
+    "providerEmail": "carlos@skillswap.com",
+    "price": 14,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "Learn basic Spanish vocabulary, pronunciation, and conversational skills for daily use.",
+    "image": "https://i.ibb.co.com/hx6HGKKS/spanish.jpg",
+    "category": "Language"
+  }
+]
