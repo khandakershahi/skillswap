@@ -2,15 +2,18 @@ import React, { use, useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import toast from 'react-hot-toast';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { useNavigate } from 'react-router';
 
 
 
 const Signup = () => {
-    const { createUser } = use(AuthContext);
+    const { createUser, setUser, updateUser, signInWithGoogle } = use(AuthContext);
     const [error, setError] = useState('')
     const [nameError, setNameError] = useState('');
 
-     const [showPassword, setShowPassword] = useState(false)
+    const [showPassword, setShowPassword] = useState(false)
+    
+    const navigate = useNavigate();
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -28,11 +31,31 @@ const Signup = () => {
 
         console.log(name, photo, email, password);
 
+        const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>]).{6,}$/;
+
+        if (!passwordPattern.test(password)) {
+            setError(
+                'Password must be at least 6 characters long and include at least one uppercase letter, one lowercase letter, and one special character.'
+            );
+            return;
+        }
+
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
-                toast.success('Account create successful');
+                // console.log(user);
+                toast.success("Sign up successful")
+                updateUser({ displayName: name, photoURL: photo })
+                    .then(() => {
+                        setUser({ ...user, displayName: name, photoURL: photo });
+                        navigate('/')
+                    })
+                    .catch((error) => {
+                        toast.error(error);
+                        setUser(user)
+
+                    });
+
 
             })
             .catch(error => {
@@ -48,7 +71,18 @@ const Signup = () => {
         setShowPassword(!showPassword)
     }
 
+    const handleGogoleSignIn = () => {
+        signInWithGoogle()
+            .then(result => {
+                console.log(result);
+                navigation(location?.state || '/')
 
+            })
+            .catch(error => {
+                console.log(error);
+
+            })
+    }
 
     return (
         <div className='w-[1320px] mx-auto'>
@@ -89,6 +123,12 @@ const Signup = () => {
                             <button type='submit' className="btn btn-neutral mt-4">Register</button>
                         </fieldset>
                     </form>
+                    {/* sign in with google  */}
+                    {/* Google */}
+                    <button onClick={handleGogoleSignIn} className="btn bg-white text-black border-[#e5e5e5]">
+                        <svg aria-label="Google logo" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g><path d="m0 0H512V512H0" fill="#fff"></path><path fill="#34a853" d="M153 292c30 82 118 95 171 60h62v48A192 192 0 0190 341"></path><path fill="#4285f4" d="m386 400a140 175 0 0053-179H260v74h102q-7 37-38 57"></path><path fill="#fbbc02" d="m90 341a208 200 0 010-171l63 49q-12 37 0 73"></path><path fill="#ea4335" d="m153 219c22-69 116-109 179-50l55-54c-78-75-230-72-297 55"></path></g></svg>
+                        Login with Google
+                    </button>
                 </div>
 
             </div>
