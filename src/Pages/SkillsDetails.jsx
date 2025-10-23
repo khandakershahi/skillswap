@@ -13,7 +13,7 @@ const SkillsDetails = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        toast.success("✅ Session booked successfully!");
+        toast.success("Session booked successfully!");
         setFormData({ name: "", email: "" });
     };
 

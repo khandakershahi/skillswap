@@ -3,6 +3,8 @@ import Home from "../Pages/Home";
 import { createBrowserRouter } from "react-router";
 import Skills from "../Pages/Skills";
 import SkillsDetails from "../Pages/SkillsDetails";
+import MyProfile from "../Pages/MyProfile";
+import Error404 from "../Pages/Error404";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +25,15 @@ const router = createBrowserRouter([
                 path: '/skills-details/:id',
                 element: <SkillsDetails></SkillsDetails>,
                 loader: () => fetch('../skillData.json'),
+            },
+            {
+                path: '/my-profile',
+                element: <MyProfile></MyProfile>
+            },
+            {
+                path: '/*',
+                Component: Error404
+
             }
         ]
     }
