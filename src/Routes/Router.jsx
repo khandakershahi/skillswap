@@ -5,6 +5,8 @@ import Skills from "../Pages/Skills";
 import SkillsDetails from "../Pages/SkillsDetails";
 import MyProfile from "../Pages/MyProfile";
 import Error404 from "../Pages/Error404";
+import Signup from "../Pages/Signup";
+import Signin from "../Pages/Signin";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
             {
                 path: '/my-profile',
                 element: <MyProfile></MyProfile>
+            },
+            {
+                path: '/auth/signup',
+                Component: Signup
+            },
+            {
+                path: '/auth/signin',
+                Component: Signin
             },
             {
                 path: '/*',

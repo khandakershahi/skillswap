@@ -39,8 +39,9 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <a className="btn bg-accent text-white">Signup</a>
+                <div className="navbar-end space-x-2">
+                    <NavLink to='/auth/signup' className="btn btn-accent text-white">Signup</NavLink>
+                    <NavLink to='/auth/signin' className="btn btn-accent text-white">Signin</NavLink>
                 </div>
             </div>
         </div>

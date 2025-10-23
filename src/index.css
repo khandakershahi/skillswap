@@ -23,6 +23,10 @@ a.active {
   @apply text-primary;
 }
 
+.navbar-end a.active {
+@apply text-white;
+}
+
 /* section{
     @apply max-w-[1320px] mx-auto;
 } */
