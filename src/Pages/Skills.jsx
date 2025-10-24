@@ -7,14 +7,14 @@ const Skills = () => {
 
 
     return (
-        <div className='w-[1320px] mx-auto'>
+        <div className='w-auto lg:w-[1320px] mx-auto p-4 lg:p-0'>
             <div className='flex flex-col py-15 justify-center '>
                 <div className='text-center pb-8'>
                     <h5 className='text-accent text-lg' >Courses</h5>
                     <h2 className='text-5xl'>All Courses</h2>
                 </div>
 
-                <div className='grid grid-cols-3 gap-8'>
+                <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
                     {
                         data.map((skill) => {
                             return <div key={skill.skillId} className="card bg-base-100 shadow-xl rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 animate__animated animate__fadeInUp animate__delay-1s">

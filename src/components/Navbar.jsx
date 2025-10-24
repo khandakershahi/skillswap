@@ -82,9 +82,12 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex="-1"
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow items-start"
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow items-start gap-2"
                         >
-                            {links}
+                            {
+                                [links,
+                            signInLink]
+                            }
                         </ul>
                     </div>
 

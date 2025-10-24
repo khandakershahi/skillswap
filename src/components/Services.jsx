@@ -17,7 +17,7 @@ const Services = () => {
                 <h2 className='text-5xl'>Explore Popular Skills</h2>
             </div>
 
-            <div className='grid grid-cols-3 gap-8'>
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
                 {
                     newData.map((skill) => {
                         return <div key={skill.skillId} className="card bg-base-100 shadow-xl rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 animate__animated animate__fadeInUp animate__delay-1s">

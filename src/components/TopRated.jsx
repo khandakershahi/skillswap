@@ -12,7 +12,7 @@ const TopRated = () => {
                 <h5 className='text-accent text-lg' >Instructors</h5>
                 <h2 className='text-5xl'>Top Rated Providers</h2>
             </div>
-            <div className='grid grid-cols-4 gap-5'>
+            <div className='grid grid-cols-1 lg:grid-cols-4 gap-5'>
                 <div className='card flex flex-col justify-center items-center p-4 gap-4 bg-white rounded-md'>
                     <img className='rounded-md w-[275px] h-[285px]' src={instructorImg1} alt="" />
                     <h5 className='text-3xl font-semibold'>Michael Tan</h5>

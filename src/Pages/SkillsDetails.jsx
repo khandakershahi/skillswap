@@ -27,7 +27,7 @@ const SkillsDetails = () => {
 
     return (
         <div className="bg-base-200 py-16">
-            <div className="max-w-[1320px] mx-auto px-4">
+            <div className="w-auto lg:w-[1320px] mx-auto p-4 lg:p-0">
                 {/* Skill Card */}
                 <div className="card bg-white shadow-xl mb-10">
                     <figure>

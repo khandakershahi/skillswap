@@ -23,7 +23,8 @@ a.active {
   @apply text-primary;
 }
 
-.navbar-end a.active {
+.navbar-end a.active ,
+.navbar-start a.active {
 @apply text-white;
 }
 

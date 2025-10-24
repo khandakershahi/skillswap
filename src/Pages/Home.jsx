@@ -12,7 +12,7 @@ const Home = () => {
         <section className='w-full'>
 
             <Hero></Hero>
-            <div className='w-[1320px] mx-auto'>
+            <div className='w-auto lg:w-[1320px] mx-auto p-4 lg:p-0'>
                 <Services></Services>
                 <TopRated></TopRated>
                 <HowItWorks></HowItWorks>
