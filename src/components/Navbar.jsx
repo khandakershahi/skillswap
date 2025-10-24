@@ -14,7 +14,7 @@ const Navbar = () => {
         logOut()
             .then(() => {
                 toast.success('You logged out successfully');
-                navigate('/'); // Clean redirect
+                navigate('/');
             })
             .catch((error) => {
                 toast.error(error.message);
@@ -54,12 +54,16 @@ const Navbar = () => {
 
     const signInLink = (
         <>
-            <NavLink to="/auth/signup" className="btn btn-accent text-white">
-                Signup
-            </NavLink>
-            <NavLink to="/auth/signin" className="btn btn-accent text-white">
-                Signin
-            </NavLink>
+            <li key="signup">
+                <NavLink to="/auth/signup" className="btn btn-accent text-white">
+                    Signup
+                </NavLink>
+            </li>
+            <li key="signin">
+                <NavLink to="/auth/signin" className="btn btn-accent text-white">
+                    Signin
+                </NavLink>
+            </li>
         </>
     );
 
@@ -84,10 +88,14 @@ const Navbar = () => {
                             tabIndex="-1"
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow items-start gap-2"
                         >
-                            {
-                                [links,
-                            signInLink]
-                            }
+                            {links}
+                            {user ? (
+                                <li key="signout">
+                                    {signOutLink}
+                                </li>
+                            ) : (
+                                signInLink
+                            )}
                         </ul>
                     </div>
 
@@ -102,7 +110,16 @@ const Navbar = () => {
                 </div>
 
                 <div className="navbar-end space-x-2">
-                    {user ? signOutLink : signInLink}
+                    {user ? signOutLink : (
+                        <>
+                            <NavLink to="/auth/signup" className="btn btn-accent text-white">
+                                Signup
+                            </NavLink>
+                            <NavLink to="/auth/signin" className="btn btn-accent text-white">
+                                Signin
+                            </NavLink>
+                        </>
+                    )}
                 </div>
             </div>
         </div>
