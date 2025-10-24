@@ -12,7 +12,7 @@ const Signup = () => {
     const [nameError, setNameError] = useState('');
 
     const [showPassword, setShowPassword] = useState(false)
-    
+
     const navigate = useNavigate();
 
     const handleRegister = (e) => {
@@ -29,7 +29,7 @@ const Signup = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        console.log(name, photo, email, password);
+        // console.log(name, photo, email, password);
 
         const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>]).{6,}$/;
 
@@ -74,12 +74,13 @@ const Signup = () => {
     const handleGogoleSignIn = () => {
         signInWithGoogle()
             .then(result => {
-                console.log(result);
-                navigation(location?.state || '/')
+                // console.log(result);
+                toast.success('Sigin success')
+                navigate(location?.state || '/')
 
             })
             .catch(error => {
-                console.log(error);
+                toast.error(error);
 
             })
     }

@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import Services from '../components/Services';
 import TopRated from '../components/TopRated';
 import HowItWorks from '../components/HowItWorks';
+import WhyChoose from '../components/WhyChoose';
 
 const Home = () => {
 
@@ -16,6 +17,7 @@ const Home = () => {
                 <Services></Services>
                 <TopRated></TopRated>
                 <HowItWorks></HowItWorks>
+                <WhyChoose></WhyChoose>
             </div>
 
         </section>

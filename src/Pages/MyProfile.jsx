@@ -40,7 +40,7 @@ const MyProfile = () => {
                             "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
                         }
                         alt="User Avatar"
-                        className="w-24 h-24 rounded-full border-4 border-indigo-500 mb-4"
+                        className="w-24 h-24 object-cover rounded-full border-4 border-indigo-500 mb-4"
                     />
                     <h3 className="text-lg font-medium text-gray-700">
                         {displayName || "Anonymous User"}
