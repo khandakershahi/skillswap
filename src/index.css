@@ -23,22 +23,20 @@ a.active {
   @apply text-primary;
 }
 
-.navbar-end a.active ,
-.navbar-start a.active {
-@apply text-white;
+.navbar-end a.btn.active,
+.navbar-start a.btn.active {
+  @apply text-white;
 }
 
 /* section{
     @apply max-w-[1320px] mx-auto;
 } */
- 
-.mySwiper{
-    height: 100vh;
+
+.mySwiper {
+  height: 100vh;
 }
 
 .swiper-button-next,
-.swiper-button-prev
-{
-  color:  var(--color-primary)!important;
+.swiper-button-prev {
+  color: var(--color-primary) !important;
 }
-
