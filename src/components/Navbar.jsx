@@ -40,6 +40,7 @@ const Navbar = () => {
                         className="w-8 h-8 rounded-full object-cover"
                         src={user?.photoURL || userIcon}
                         alt="user"
+                        title={user?.displayName || "User"}
                     />
                 </NavLink>
             </li>
